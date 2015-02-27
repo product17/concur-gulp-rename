@@ -4,7 +4,7 @@
   "description": "rename files going through the gulp streams, this is a fork the the gulp-rename module",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha test/*.spec.js"
   },
   "repository": {
     "type": "git",
