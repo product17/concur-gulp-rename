@@ -3,7 +3,7 @@
 
 require("./spec-helper");
 
-describe("gulp-rename", function () {
+describe("concur-gulp-rename", function () {
 	context("with string parameter", function () {
 		context("when src pattern does not contain directory glob", function () {
 			it("sets filename to value", function (done) {
@@ -159,6 +159,16 @@ describe("gulp-rename", function () {
 				};
 			};
 			var expectedPath = "test/elsewhere/aloha.md";
+			helper(srcPattern, obj, expectedPath, done);
+		});
+
+		it("path should contain fullpath property", function (done) {
+			var obj = function (path) {
+				path.extname.should.equal(".txt");
+				path.extname = ".md";
+				path.fullpath.should.not.equal('');
+			};
+			var expectedPath = "test/fixtures/hello.md";
 			helper(srcPattern, obj, expectedPath, done);
 		});
 	});
