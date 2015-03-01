@@ -8,13 +8,10 @@ function gulpRename(obj) {
 
 	function parsePath(path, fullpath) {
 		var extname = Path.extname(path);
-		if (fullpath) {
-			fullpath = fullpath;
-		} else {
-			fullpath = '';
-		}
+		var filepath = (fullpath) ? fullpath : '';
+
 		return {
-			fullpath: fullpath,
+			fullpath: filepath,
 			dirname: Path.dirname(path),
 			basename: Path.basename(path, extname),
 			extname: extname
@@ -61,4 +58,3 @@ function gulpRename(obj) {
 }
 
 module.exports = gulpRename;
-
