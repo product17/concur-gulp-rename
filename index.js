@@ -8,7 +8,7 @@ function gulpRename(obj) {
 
 	function parsePath(path, fullpath) {
 		var extname = Path.extname(path);
-		var filepath = (fullpath) ? fullpath : '';
+		var filepath = (fullpath) ? fullpath : "";
 
 		return {
 			fullpath: filepath,
